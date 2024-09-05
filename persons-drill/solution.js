@@ -97,3 +97,18 @@ export function getFirstHobby(persons) {
       }
   }
 }
+
+//  Q7  Write a function that accesses and prints the names and email addresses of individuals aged 25.
+export function infoOfAged25(persons) {
+  if (!Array.isArray(persons)) {
+    console.log("Invalid arugment");
+    return;
+  }
+
+  for (let index = 0; index < persons.length; index++) {
+    const { age, name, email } = persons[index];
+    if (age && age === 25 && name && email) {
+      console.log(`${name}'s email address is ${email}, who's age is 25`);
+    }
+  }
+}

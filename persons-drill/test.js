@@ -6,6 +6,7 @@ import {
   logTheIndexedPerson,
   printAllAges,
   getFirstHobby,
+  infoOfAged25,
 } from "./solution.js";
 
 // Q1
@@ -46,3 +47,10 @@ getFirstHobby(persons);
 getFirstHobby([{}]);
 getFirstHobby(undefined);
 getFirstHobby();
+
+//  Q7
+infoOfAged25(persons);
+infoOfAged25([{ name: "Mark", age: 25 }]);
+infoOfAged25([{ age: 25 }]);
+infoOfAged25([]);
+infoOfAged25();
