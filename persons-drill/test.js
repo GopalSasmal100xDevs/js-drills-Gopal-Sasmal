@@ -4,6 +4,7 @@ import {
   getHobbiesOfaSpecificAge,
   allStudentLiveInAustralia,
   logTheIndexedPerson,
+  printAllAges,
 } from "./solution.js";
 
 // Q1
@@ -32,3 +33,9 @@ logTheIndexedPerson(persons, 20); //index more than array size
 logTheIndexedPerson(persons, -1); // negetive index
 logTheIndexedPerson([], 3); // impty array
 logTheIndexedPerson([{}, {}], 3); // empty object array
+
+// Q5
+printAllAges(persons);
+printAllAges([]);
+printAllAges([{}]);
+printAllAges();

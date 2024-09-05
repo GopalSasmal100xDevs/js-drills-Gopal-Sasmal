@@ -68,3 +68,17 @@ export function logTheIndexedPerson(persons, index) {
   const person = persons[index];
   console.log(`In index ${index} ${person.name} is present.`);
 }
+
+// Q5    Implement a loop to access and print the ages of all individuals in the dataset.
+export function printAllAges(persons) {
+  if (!Array.isArray(persons)) {
+    console.log("Argument is not valid");
+    return;
+  }
+
+  for (let index = 0; index < persons.length; index++) {
+    const person = persons[index];
+    if (person.name && person.age)
+      console.log(`${person.name} is ${person.age} years old`);
+  }
+}
