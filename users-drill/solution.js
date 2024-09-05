@@ -21,3 +21,20 @@ export function interestedInVideoGame(users) {
 
   return interestedVideoGamePlayers;
 }
+
+// Q2 Find all users staying in Germany.
+
+export function getAllUserStayInGermany(users) {
+  if (users && !Object.keys(users).length === 0) {
+    return [];
+  }
+
+  const usersLiveInGermany = [];
+  for (let user in users) {
+    if (users[user]?.nationality === "Germany") {
+      usersLiveInGermany.push(user);
+    }
+  }
+
+  return usersLiveInGermany;
+}
