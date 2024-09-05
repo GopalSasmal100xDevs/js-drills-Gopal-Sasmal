@@ -5,6 +5,7 @@ import {
   allStudentLiveInAustralia,
   logTheIndexedPerson,
   printAllAges,
+  getFirstHobby,
 } from "./solution.js";
 
 // Q1
@@ -39,3 +40,9 @@ printAllAges(persons);
 printAllAges([]);
 printAllAges([{}]);
 printAllAges();
+
+// Q6
+getFirstHobby(persons);
+getFirstHobby([{}]);
+getFirstHobby(undefined);
+getFirstHobby();

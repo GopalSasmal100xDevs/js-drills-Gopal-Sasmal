@@ -82,3 +82,18 @@ export function printAllAges(persons) {
       console.log(`${person.name} is ${person.age} years old`);
   }
 }
+
+//  Q6  Create a function to retrieve and display the first hobby of each individual in the dataset.
+export function getFirstHobby(persons) {
+  if (!Array.isArray(persons)) {
+    console.log("Argument is not valid");
+    return;
+  }
+  for (let index = 0; index < persons.length; index++) {
+    const person = persons[index];
+    if (person.hasOwnProperty("hobbies") && person.hobbies?.length > 0)
+      if (person.name && person.hobbies) {
+        console.log(`${person.name} first hobby is ${person.hobbies[0]}`);
+      }
+  }
+}
