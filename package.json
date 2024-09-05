@@ -4,7 +4,7 @@
   "main": "index.js",
   "type": "module",
   "scripts": {
-    "testCars": "node ./persons-drill/test.js"
+    "testPersonsDrill": "node ./persons-drill/test.js"
   },
   "keywords": [],
   "author": "",
