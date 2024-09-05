@@ -52,3 +52,19 @@ export function allStudentLiveInAustralia(persons) {
     }
   }
 }
+
+// Q4   Write a function that accesses and logs the name and city of the individual at the index position 3 in the dataset.
+export function logTheIndexedPerson(persons, index) {
+  if (
+    !Array.isArray(persons) ||
+    !Number.isInteger(index) ||
+    index < 0 ||
+    index >= persons.length
+  ) {
+    console.log("Invalid argument");
+    return;
+  }
+
+  const person = persons[index];
+  console.log(`In index ${index} ${person.name} is present.`);
+}

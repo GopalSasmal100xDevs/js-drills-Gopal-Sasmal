@@ -3,6 +3,7 @@ import {
   getAllEmails,
   getHobbiesOfaSpecificAge,
   allStudentLiveInAustralia,
+  logTheIndexedPerson,
 } from "./solution.js";
 
 // Q1
@@ -24,3 +25,10 @@ allStudentLiveInAustralia(persons);
 allStudentLiveInAustralia([]);
 allStudentLiveInAustralia([{}, {}]);
 allStudentLiveInAustralia(undefined);
+
+// Q4
+logTheIndexedPerson(persons, 3);
+logTheIndexedPerson(persons, 20); //index more than array size
+logTheIndexedPerson(persons, -1); // negetive index
+logTheIndexedPerson([], 3); // impty array
+logTheIndexedPerson([{}, {}], 3); // empty object array
