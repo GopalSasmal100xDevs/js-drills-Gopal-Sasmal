@@ -38,3 +38,21 @@ export function getAllUserStayInGermany(users) {
 
   return usersLiveInGermany;
 }
+
+// Q3 Find all users with masters Degree.
+
+export function getAllUsersWithMastersDeg(users) {
+  if (users && !Object.keys(users).length === 0) {
+    return [];
+  }
+
+  const usersWithMastersDeg = [];
+  const regex = /masters/i;
+  for (let user in users) {
+    if (regex.test(users[user]?.qualification)) {
+      usersWithMastersDeg.push(user);
+    }
+  }
+
+  return usersWithMastersDeg;
+}
