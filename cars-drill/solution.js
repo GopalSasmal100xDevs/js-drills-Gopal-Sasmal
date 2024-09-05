@@ -37,3 +37,22 @@ export function lastCarInInventory(inventory) {
   }
   return `Last car is a ${car_make} ${car_model}`;
 }
+
+// Q3 The marketing team wants the car models listed alphabetically on the website. Execute a function to Sort all the car model names into alphabetical order and log the results in the console as it was returned.
+
+export function sortCarsByModel(inventory) {
+  if (!inventory || !Array.isArray(inventory)) {
+    return [];
+  }
+  inventory.sort((a, b) => {
+    if (!a.car_model || !b.car_model) {
+      return -1;
+    } else if (a.car_model < b.car_model) {
+      return -1;
+    } else if (a.car_model > b.car_model) {
+      return 1;
+    }
+    return 0;
+  });
+  return inventory;
+}
