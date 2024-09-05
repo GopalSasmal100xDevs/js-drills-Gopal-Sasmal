@@ -1,5 +1,5 @@
 import inventory from "./cars.js";
-import { getCarId33, lastCarInInventory } from "./solution.js";
+import { getCarId33, lastCarInInventory, sortCarsByModel } from "./solution.js";
 
 // # Problem 1
 console.log(getCarId33(inventory));
