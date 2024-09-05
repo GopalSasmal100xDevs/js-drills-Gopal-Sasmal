@@ -1,5 +1,10 @@
 import inventory from "./cars.js";
-import { getCarId33, lastCarInInventory, sortCarsByModel } from "./solution.js";
+import {
+  getCarId33,
+  lastCarInInventory,
+  sortCarsByModel,
+  getAllCarYears,
+} from "./solution.js";
 
 // # Problem 1
 console.log(getCarId33(inventory));
@@ -26,3 +31,12 @@ const ans3 = sortCarsByModel([
 const ans4 = sortCarsByModel([{}]);
 const ans5 = sortCarsByModel();
 console.log(ans2, ans3, ans4, ans5);
+
+// # Problem 4
+const years = getAllCarYears(inventory);
+console.log(years);
+console.log(getAllCarYears());
+console.log(getAllCarYears([]));
+console.log(getAllCarYears([0]));
+console.log(getAllCarYears([{}]));
+console.log(getAllCarYears([{}, { car_make: "BMW" }, { id: 10 }]));
