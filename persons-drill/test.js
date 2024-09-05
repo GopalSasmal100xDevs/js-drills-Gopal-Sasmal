@@ -7,6 +7,7 @@ import {
   printAllAges,
   getFirstHobby,
   infoOfAged25,
+  printCityAndCountry,
 } from "./solution.js";
 
 // Q1
@@ -54,3 +55,8 @@ infoOfAged25([{ name: "Mark", age: 25 }]);
 infoOfAged25([{ age: 25 }]);
 infoOfAged25([]);
 infoOfAged25();
+
+// Q8
+printCityAndCountry(persons);
+printCityAndCountry();
+printCityAndCountry([{}, {}]);

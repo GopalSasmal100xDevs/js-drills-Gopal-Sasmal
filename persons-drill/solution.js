@@ -112,3 +112,17 @@ export function infoOfAged25(persons) {
     }
   }
 }
+
+// Q8   Implement a loop to access and log the city and country of each individual in the dataset.
+export function printCityAndCountry(persons) {
+  if (!Array.isArray(persons)) {
+    console.log("Invalid arguments");
+    return;
+  }
+
+  for (let index = 0; index < persons.length; index++) {
+    const { name, city, country } = persons[index];
+    if (name && city && country)
+      console.log(`${name} city is ${city} and country is ${country}`);
+  }
+}
