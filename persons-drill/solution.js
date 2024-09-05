@@ -37,3 +37,18 @@ export function getHobbiesOfaSpecificAge(persons, age) {
     }
   }
 }
+
+// Q3   Create a function that extracts and displays the names of individuals who are students (`isStudent: true`) and live in Australia.
+export function allStudentLiveInAustralia(persons) {
+  if (!Array.isArray(persons)) {
+    console.log("Argument is not an array");
+    return;
+  }
+
+  for (let index = 0; index < persons.length; index++) {
+    const person = persons[index];
+    if (person.isStudent && person.country && person.country === "Australia") {
+      console.log(`${person.name} is a student and live in Australia`);
+    }
+  }
+}
