@@ -56,3 +56,30 @@ export function getAllUsersWithMastersDeg(users) {
 
   return usersWithMastersDeg;
 }
+
+/*
+Q4 Group users based on their Programming language mentioned in their designation.
+*/
+
+export function getDevelopers(users) {
+  if (users && !Object.keys(users).length === 0) {
+    return {};
+  }
+
+  const developers = { python: [], javascript: [], golang: [], others: [] };
+  const pythonRegex = /python/i;
+  const javascriptRegex = /javascript/i;
+  const golangRegex = /golang/i;
+  for (let user in users) {
+    if (pythonRegex.test(users[user]?.desgination)) {
+      developers["python"].push(user);
+    } else if (javascriptRegex.test(users[user]?.desgination)) {
+      developers["javascript"].push(user);
+    } else if (golangRegex.test(users[user]?.desgination)) {
+      developers["golang"].push(user);
+    } else {
+      developers["others"].push(user);
+    }
+  }
+  return developers;
+}

@@ -3,6 +3,7 @@ import {
   interestedInVideoGame,
   getAllUserStayInGermany,
   getAllUsersWithMastersDeg,
+  getDevelopers,
 } from "./solution.js";
 
 // Q1
@@ -24,3 +25,8 @@ console.log(
   "Users who have master degree",
   getAllUsersWithMastersDeg({ mark: {}, new: {} })
 );
+
+// Q4
+console.log("Developers ", getDevelopers(users));
+console.log("Developers ", getDevelopers({ mark: {} }));
+console.log("Developers ", getDevelopers());
