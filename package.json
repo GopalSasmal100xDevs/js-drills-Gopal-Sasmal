@@ -5,7 +5,8 @@
   "type": "module",
   "scripts": {
     "testPersonsDrill": "node ./persons-drill/test.js",
-    "testUsersDrill": "node ./users-drill/test.js"
+    "testUsersDrill": "node ./users-drill/test.js",
+    "testCarsDrill": "node ./cars-drill/test.js"
   },
   "keywords": [],
   "author": "",
