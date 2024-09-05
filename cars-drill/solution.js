@@ -21,3 +21,19 @@ export function getCarId33(inventory) {
     }
   }
 }
+
+// Q2 The dealer needs the information on the last car in their inventory. Execute a function to find what the make and model of the last car in the inventory is?  Log the make and model into the console in the format of:
+export function lastCarInInventory(inventory) {
+  if (!inventory || !Array.isArray(inventory)) {
+    return "Invalid argument";
+  }
+  const { car_make, car_model } = inventory.at(-1); // inventory[inventory.length-1]
+  if (!car_make && !car_model) {
+    return "That car has'n any car make or model";
+  } else if (!car_make) {
+    return "That car has'n any car make";
+  } else if (!car_model) {
+    return "That car has'n any car model";
+  }
+  return `Last car is a ${car_make} ${car_model}`;
+}
