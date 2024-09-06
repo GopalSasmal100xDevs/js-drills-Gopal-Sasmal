@@ -46,11 +46,11 @@ export function sortCarsByModel(inventory) {
   }
   inventory.sort((a, b) => {
     if (!a.car_model || !b.car_model) {
-      return -1;
-    } else if (a.car_model.toLowerCase() < b.car_model.toLowerCase()) {
-      return -1;
-    } else if (a.car_model.toLowerCase() > b.car_model.toLowerCase()) {
       return 1;
+    } else if (a.car_model.toLowerCase() < b.car_model.toLowerCase()) {
+      return 1;
+    } else if (a.car_model.toLowerCase() > b.car_model.toLowerCase()) {
+      return -1;
     }
     return 0;
   });
