@@ -1,5 +1,3 @@
-// find is use to find element in array according to the condition
-
 export function find(arr, cb) {
   if (!arr) return;
 
