@@ -25,7 +25,7 @@ export function limitFunctionCallCount(cb, n) {
   return function (arg) {
     if (functionCallCount < n) {
       functionCallCount++;
-      cb(arg);
+      return cb(arg);
     } else {
       return null;
     }
