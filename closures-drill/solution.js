@@ -27,4 +27,18 @@ export function limitFunctionCallCount(cb, n) {}
 // If the returned function is invoked with arguments that it has already seen
 // then it should return the cached result and not invoke `cb` again.
 // `cb` should only ever be invoked once for a given set of arguments.
-export function cacheFunction(cb) {}
+export function cacheFunction(cb) {
+  const cache = {};
+
+  return function (arg) {
+    const key = JSON.stringify(arg);
+    if (cache[key]) {
+      //   console.log(cache);
+      return cache[key];
+    } else {
+      const result = cb(arg);
+      cache[key] = result;
+      return result;
+    }
+  };
+}
