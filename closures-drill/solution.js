@@ -19,7 +19,18 @@ export function counterFactory() {
 // Should return a function that invokes `cb`.
 // The returned function should only allow `cb` to be invoked `n` times.
 // Returning null is acceptable if cb can't be returned
-export function limitFunctionCallCount(cb, n) {}
+export function limitFunctionCallCount(cb, n) {
+  let functionCallCount = 0;
+
+  return function (arg) {
+    if (functionCallCount < n) {
+      functionCallCount++;
+      cb(arg);
+    } else {
+      return null;
+    }
+  };
+}
 
 // Should return a function that invokes `cb`.
 // A cache (object) should be kept in closure scope.
